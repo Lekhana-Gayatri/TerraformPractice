@@ -83,21 +83,6 @@ resource "aws_instance" "server" {
     inline = [ 
       "sudo su",
       "echo 'hello from the remote instance'",
-      "apt update -y",
-      "echo 'installing pip'",
-      "apt install -y python3-pip",
-      "apt install python3-venv",
-      "echo 'cd to Fundraising'",
-      "cd /home/ubuntu/Fundraising",
-      "echo 'installing venev'",
-      "python3 -m venv env",
-      "echo 'activating env'",
-      "./env/Scripts/activate",
-      "echo 'installing django'",
-      "pip3 install django",
-      "echo 'cd to myproject'",
-      "cd myproject",
-      "echo 'running server'",
       "python3 a.py"
      ]
   }
